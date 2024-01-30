@@ -1,0 +1,90 @@
+
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Sales Price Prediction Using ANN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            
+        }
+    
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+    
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+    
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #45a049;
+        }
+    
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+        
+    </style>
+</head>
+<body>
+    <!-- ... your HTML content ... -->
+    <h1>Car Sales Price Prediction Using ANN</h1>
+    <br>
+    <h1>Internship Project Task From NeuroNexus Innovation</h1>
+    <br>
+    <h3 style="text-align: center">By:Md Rian Ur Rahaman</h3>
+<br>
+<br>
+
+<form action="/predict" method="post">
+    <label for="annual Salary">Annual Salary:</label>
+    <input type="number" name="annual Salary" required><br>
+
+    <label for="credit card debt">Credit Card Debt:</label>
+    <input type="number" name="credit card debt" required><br>
+
+    <label for="net worth">Net Worth:</label>
+    <input type="number" name="net worth" required><br>
+
+    <label for="age">Age:</label>
+    <input type="number" name="age" required><br>
+
+    <button type="submit">Predict</button>
+</form>
+</body>
+</html>
