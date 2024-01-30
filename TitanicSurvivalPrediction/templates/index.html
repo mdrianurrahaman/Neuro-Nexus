@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Survival Prediction</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #result {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <h1>Titanic Survival Prediction Web App</h1>
+    <br>
+    <h1>Internship Project Task From NeuroNexus Innovation</h1>
+    <br>
+    <h5 style="text-align: center">By:Md Rian Ur Rahaman</h5>
+    
+    <form id="predictionForm" action="/predict" method="post">
+        <label for="Pclass">Pclass:</label>
+        <input type="number" name="Pclass" required><br>
+        
+        <label for="Sex">Sex (0 for male, 1 for female):</label>
+        <input type="number" name="Sex" required><br>
+        
+        <label for="Age">Age:</label>
+        <input type="number" name="Age" required><br>
+        
+        <label for="SibSp">Siblings/Spouses:</label>
+        <input type="number" name="SibSp" required><br>
+        
+        <label for="Parch">Parch:</label>
+        <input type="number" name="Parch" required><br>
+        
+        <label for="Fare">Fare:</label>
+        <input type="number" name="Fare" required><br>
+        
+        <label for="Embarked">Embarked (0 for C, 1 for Q, 2 for S):</label>
+        <input type="number" name="Embarked" required><br>
+        
+        <button type="button" onclick="predict()">Predict</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function predict() {
+            var form = document.getElementById("predictionForm");
+            var formData = new FormData(form);
+
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("result").innerHTML = "<h2>Prediction Result: " + data + "</h2>";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
