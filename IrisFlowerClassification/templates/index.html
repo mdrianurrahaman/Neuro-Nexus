@@ -1,0 +1,89 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #00FFFF;
+        }
+    
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+    
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+    
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #45a049;
+        }
+    
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+        
+    </style>
+</head>
+<body>
+    <!-- ... your HTML content ... -->
+    <h1>Iris Flower Classification Prediction Web App</h1>
+    <br>
+    <h1>Internship Project Task From NeuroNexus Innovation</h1>
+    <br>
+    <h5 style="text-align: center">By:Md Rian Ur Rahaman</h5>
+<br>
+<br>
+
+    <form action="/predict" method="post">
+        <label for="sepal_length">Sepal Length:</label>
+        <input type="text" name="sepal_length" required><br>
+
+        <label for="sepal_width">Sepal Width:</label>
+        <input type="text" name="sepal_width" required><br>
+
+        <label for="petal_length">Petal Length:</label>
+        <input type="text" name="petal_length" required><br>
+
+        <label for="petal_width">Petal Width:</label>
+        <input type="text" name="petal_width" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
